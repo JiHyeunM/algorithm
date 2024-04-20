@@ -4,9 +4,6 @@
 
 function solution(money) {
   money = 15000;
-  // 55로 나누어질 떄까지 ++ 나머지를 반환
-  for (i = 0; i <= money % 5500 === 0; i++) {
-    return [i, money % 5500];
-  }
+  return [Math.trunc(money / 5500), money % 5500];
 }
 console.log(solution());
